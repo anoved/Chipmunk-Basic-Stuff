@@ -9,3 +9,5 @@ Sample code and other scraps for [Chipmunk Basic](http://www.nicholson.com/rhn/b
 - [Syntax Coloring Extensions](Highlighting) - editor language modules
 - [Command notes](commandnotes.md) - info on (then) undocumented commands
 - [HTML documentation](cbasdox) - Framed cross-referenced version of (out of date) Chipmunk Basic documentation.
+
+Unless otherwise noted, the content of this repository is released into the public domain.
