@@ -1,0 +1,1 @@
+1 graphics 05 cls7 let x = 508 let y = 5010 sprite 1 x,y,13520 get m$30 if m$ = "8" then let y = y-435 if m$ = "2" then let y = y+440 if m$ = "4" then let x = x-445 if m$ = "6" then let x = x+450 goto 10

@@ -1,0 +1,19 @@
+nedit.highlightPatterns:\
+	Chipmunk Basic:1:0{\n\
+		Comment Remark:"(?:rem|')":"$"::Comment::\n\
+		Comment Shell:"^#":"$"::Comment::\n\
+		Double Quoted String:"""":""""::String::\n\
+		Gosub Goto Label:"^\\s*(\\w+):":::Plain::\n\
+		Gosub Goto Label HL:"\\1":""::Label:Gosub Goto Label:C\n\
+		Subroutine:"^\\s*(?:sub)\\s+(\\w+)\\s*\\((.*)\\)":::Plain::\n\
+		Subroutine Name HL:"\\1":""::Subroutine:Subroutine:C\n\
+		Subroutine Param HL:"\\2":""::Subroutine1:Subroutine:C\n\
+		Statements:"<(?:as|call|case|class|close|cls|data|def|degrees|dim|else|elseif|end|endif|erase|exec|exit|extends|for|fputbyte|fseek|get|gosub|goto|home|if|input|invert|let|mat|next|on error|on gosub|on goto|open|open|option|origin|poke|pop|print|push|put|random|read|rem|restore|return|select|step|stop|sub|then|to|transpose|type|using|wend|while|new|window)>":::Keyword::\n\
+		Mathematical:"<(?:abs|asc|atn|cos|eof|erl|exp|fgetbyte|floor|instr|int|isarray|len|log|log10|peek|pi|pop|randomize|rnd|sgn|sin|sqr|timer|ubound|val|varptr)>":::Keyword::\n\
+		String Processing:"<(?:bin\\$|chr\\$|errorstatus\\$|field\\$|format\\$|hex\\$|inkey\\$|input\\$|lcase\\$|left\\$|mid\\$|right\\$|str\\$|time\\$|date\\$)>":::Keyword::\n\
+		Logic:"<(?:mod|not|and|or|xor|true|false)>":::Identifier::\n\
+		UNIX:"<(?:gotoxy|sys|getenv\\$|argv\\$)>":::Identifier1::\n\
+		Macintosh:"<(?:date\\$|fre|pos|time\\$|graphics|macfunction)>":::Identifier2::\n\
+		String Variable:"<(?:\\w+\\$)>":::Text Key::\n\
+	}
+nedit.languageModes: Chipmunk Basic:.bas .cbas .BAS::Auto:None::::

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	
+<!--
+	Chipmunk Basic Codeless Language Module for BBEdit 8.5+ or TextWrangler 2.2+
+	Jim DeVona, 12 November 2007, http://anoved.net/
+	
+	The keyword list is probably incomplete.
+	
+	Language feature patterns based partly on examples and template by Seth Dillingham:
+	http://www.truerwords.net/articles/bbedit/codeless_language_module.html
+-->
+
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>gotoxy</string>
+		<string>#cbas#run_only</string>
+		<string>sys</string>
+		<string>getenv$</string>
+		<string>argv$</string>
+		<string>bin$</string>
+		<string>chr$</string>
+		<string>errorstatus$</string>
+		<string>field$</string>
+		<string>format$</string>
+		<string>hex$</string>
+		<string>inkey$</string>
+		<string>input$</string>
+		<string>lcase$</string>
+		<string>left$</string>
+		<string>mid$</string>
+		<string>right$</string>
+		<string>str$</string>
+		<string>time$</string>
+		<string>date$</string>
+		<string>mod</string>
+		<string>not</string>
+		<string>and</string>
+		<string>or</string>
+		<string>xor</string>
+		<string>true</string>
+		<string>false</string>
+		<string>abs</string>
+		<string>asc</string>
+		<string>atn</string>
+		<string>cos</string>
+		<string>eof</string>
+		<string>erl</string>
+		<string>exp</string>
+		<string>fgetbyte</string>
+		<string>floor</string>
+		<string>instr</string>
+		<string>int</string>
+		<string>isarray</string>
+		<string>len</string>
+		<string>log</string>
+		<string>log10</string>
+		<string>peek</string>
+		<string>pi</string>
+		<string>pop</string>
+		<string>randomize</string>
+		<string>rnd</string>
+		<string>sgn</string>
+		<string>sin</string>
+		<string>sqr</string>
+		<string>timer</string>
+		<string>ubound</string>
+		<string>val</string>
+		<string>varptr</string>
+		<string>as</string>
+		<string>call</string>
+		<string>case</string>
+		<string>class</string>
+		<string>close</string>
+		<string>cls</string>
+		<string>data</string>
+		<string>def</string>
+		<string>degrees</string>
+		<string>dim</string>
+		<string>else</string>
+		<string>elseif</string>
+		<string>end</string>
+		<string>endif</string>
+		<string>erase</string>
+		<string>exec</string>
+		<string>exit</string>
+		<string>extends</string>
+		<string>for</string>
+		<string>fputbyte</string>
+		<string>get</string>
+		<string>gosub</string>
+		<string>goto</string>
+		<string>home</string>
+		<string>if</string>
+		<string>input</string>
+		<string>invert</string>
+		<string>let</string>
+		<string>mat</string>
+		<string>next</string>
+		<string>on</string>
+		<string>error</string>
+		<string>open</string>
+		<string>option</string>
+		<string>origin</string>
+		<string>poke</string>
+		<string>pop</string>
+		<string>print</string>
+		<string>push</string>
+		<string>put</string>
+		<string>random</string>
+		<string>read</string>
+		<string>rem</string>
+		<string>restore</string>
+		<string>return</string>
+		<string>select</string>
+		<string>step</string>
+		<string>stop</string>
+		<string>sub</string>
+		<string>then</string>
+		<string>to</string>
+		<string>transpose</string>
+		<string>type</string>
+		<string>using</string>
+		<string>wend</string>
+		<string>while</string>
+		<string>new</string>
+		<string>window</string>
+		<string>error</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>????</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Chipmunk Basic</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.cbas</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.bas</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		
+		<!--
+			Parameter list doesn't explicitly match a list of identifiers.
+			Chipmunk Basic doesn't support nested subroutines; neither does this pattern.
+			Gosub label:return subroutines are not supported.
+		-->
+		<key>Function Pattern</key>
+		<string><![CDATA[(?P<function>\bsub[ \t]+(?P<function_name>[a-zA-Z][a-zA-Z0-9_]*[%$]?)[ \t]*\(.*?\)(?:.|\r)*?end sub\b)]]></string>
+		
+		<!-- 
+			Both "rem" and apostophe comments are matched
+		-->
+		<key>Comment Pattern</key>
+		<string><![CDATA[(?:'.*$)|(?:rem .*$)]]></string>
+		
+		<!--
+			Strings cannot span lines.
+		-->
+		<key>String Pattern</key>
+		<string><![CDATA["[^"\r]*"]]></string>
+		
+		<key>Identifier and Keyword Character Class</key>
+		<string><![CDATA[a-zA-Z0-9_$%]]></string>
+	</dict>
+</dict>
+</plist>
