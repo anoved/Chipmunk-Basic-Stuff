@@ -8,3 +8,4 @@ Sample code and other scraps for [Chipmunk Basic](http://www.nicholson.com/rhn/b
 - [Vintage Examples](Vintage Examples) - fragments of early experiment
 - [Syntax Coloring Extensions](Highlighting) - editor language modules
 - [Command notes](commandnotes.md) - info on (then) undocumented commands
+- [HTML documentation](cbasdox) - Framed cross-referenced version of (out of date) Chipmunk Basic documentation.
