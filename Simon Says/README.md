@@ -8,7 +8,7 @@ The game is playable but is primarily intended as an example. There are some rou
 
 ## Download
 
-[`cbsimon.bas`](cbsimon.bas)_
+[`cbsimon.bas`](cbsimon.bas)
 
 ## Layouts
 

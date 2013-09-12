@@ -70,4 +70,10 @@ cb-shpdump is cb-shpdraw's textual predecessor. It does what [Shapelib's](http:/
 
 [![worldcities](worldcities_small.png)](worldcities.png)
 
->run Enter window width: 800 Enter window height: 600 Enter window color (r,g,b percents): 0,0,0 Specify shapefile (none to stop): WorldLocs_point Symbol color (r,g,b percents): 100,100,0 Symbol size (>=1): 2 Rendering single-point shapefile
+	>run Enter window width: 800
+	Enter window height: 600
+	Enter window color (r,g,b percents): 0,0,0
+	Specify shapefile (none to stop): WorldLocs_point
+	Symbol color (r,g,b percents): 100,100,0
+	Symbol size (>=1): 2
+	Rendering single-point shapefile
